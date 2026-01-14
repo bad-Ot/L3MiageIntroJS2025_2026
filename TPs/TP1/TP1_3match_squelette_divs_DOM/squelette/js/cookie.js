@@ -50,7 +50,7 @@ export default class Cookie {
   isSelectionnee() {
     // on regarde si l'image a la classe CSS "cookies-selected"
     // A FAIRE
-    //return this.htmlImage.classList.contains("cookies-selected");
+    return this.htmlImage.classList.contains("cookies-selected");
   }
 
   selectionnee() {
@@ -60,6 +60,8 @@ export default class Cookie {
     // statique de la classe Cookie, urlsImagesSurlignees
     // A FAIRE
    
+      this.htmlImage.src = Cookie.urlsImagesSurlignees[this.type];
+      this.htmlImage.classList.add("cookies-selected");
     // A FAIRE On va ajouter la classe CSS "cookies-selected" à
     // l'image du cookie
     
@@ -68,7 +70,9 @@ export default class Cookie {
   deselectionnee() {
     // on change l'image et la classe CSS
     // A FAIRE
-  
+    
+      this.htmlImage.src = Cookie.urlsImagesNormales[this.type];
+      this.htmlImage.classList.remove("cookies-selected");
     // A FAIREOn va ajouter la classe CSS "cookies-selected" à
     // l'image du cookie
     

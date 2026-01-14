@@ -36,7 +36,7 @@ export default class Grille {
       // est à l'index 4
       // on est sur la ligne 0 (car 4/9 = 0) et 
       // la colonne 4 (car 4%9 = 4)
-      let ligne = Math.floor(index / this.l);
+      let ligne = Math.floor(index / this.c);
       let colonne = index % this.c;
 
       console.log("On remplit le div index=" + index + " l=" + ligne + " col=" + colonne);
@@ -62,7 +62,6 @@ export default class Grille {
 
         // highlight + changer classe CSS
         cookie.selectionnee();
-
         // A FAIRE : tester combien de cookies sont sélectionnées
         // si 0 on ajoute le cookie cliqué au tableau
         // si 1 on ajoute le cookie cliqué au tableau
